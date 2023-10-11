@@ -1,0 +1,128 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos do cabeçalho (header) */
+header {
+    background-color: #007bff79;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px; /* Ajuste o tamanho do logotipo conforme necessário */
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s;
+    margin: 0 20px;
+}
+
+.navbar a:hover {
+    color: rgb(15, 21, 109);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.search-button {
+    background-color: #1100ff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Espaço em branco */
+.spacer {
+    height: 20px;
+}
+.title {
+    font-size: 24px; /* Tamanho do título, ajuste conforme necessário */
+    font-weight: bold; /* Texto em negrito */
+    text-align: center; /* Centralizar o título */
+    margin: 20px 0; /* Espaçamento superior e inferior para separar do conteúdo circundante */
+}
+
+
+/* Estilos da imagem e botão */
+.image-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Defina a altura da imagem para ocupar toda a altura da tela */
+    position: relative;
+}
+
+.image-container img {
+    width: 50%; /* Defina a largura da imagem conforme necessário */
+    height: auto;
+}
+.left-align {
+    text-align: left; /* Alinha o texto à esquerda */
+    line-height: 1.5; /* Adiciona espaçamento entre as linhas */
+}
+
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Estilos do texto */
+.text-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos da grade de fotos */
+.photo-grid {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos responsivos para telas menores */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .image-container img {
+        width: 80%; /* Reduz a largura da imagem para telas menores */
+    }
+}

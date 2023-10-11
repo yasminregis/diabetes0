@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Estilos para o pop-up */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(8, 31, 112);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 60px; /* Borda arredondada */
+            box-shadow: 0 2px 10px rgb(255, 255, 255);
+            z-index: 1;
+            color: #ccc;
+        }
+
+        /* Estilos para o quiz */
+        #quiz {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(8, 31, 112);
+            padding: 20px;
+            border: 1px solid #240606;
+            border-radius: 60px; /* Borda arredondada */
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pop-up de aviso (será exibido automaticamente) -->
+    <div id="popup">
+        <p>VOCÊ SABE OQUE É DIABETES?</p>
+        <p> É uma condição que afeta milhões de pessoas em todo o mundo, mas o quanto você realmente sabe sobre ela? Teste seus conhecimentos e aprenda mais sobre essa condição de saúde com o nosso quiz sobre diabetes. O nosso quiz é uma ótima maneira de testar o seu conhecimento e aumentar a sua compreensão sobre o diabetes. Com uma série de perguntas de múltipla escolha, você poderá marcar a resposta que melhor se identifica </p>
+        <p>Compartilhe os seus resultados com amigos e familiares para ajudá-los a entender mais sobre essa condição. Afinal, o conhecimento é a chave para o controle e a prevenção do diabetes.</p>
+
+        <button onclick="fecharAviso()">Entendi</button>
+    </div>
+
+   
+    <div id="quiz">
+        <p>Pergunta 1: Você sente algum desses sintomas?</p>
+        <input type="radio" name="q1" value="A"> A) Sede exessiva<br>
+        <input type="radio" name="q1" value="B"> B) Dor de cabeça<br>
+        <input type="radio" name="q1" value="C"> C) Pele seca<br>
+        
+        <button onclick="submeterQuiz()">Enviar</button>
+    </div>
+ 
+</div>
+    <script>
+        // Exibir o pop-up automaticamente ao carregar a página
+        window.onload = function() {
+            document.getElementById('popup').style.display = 'block';
+        };
+
+        function fecharAviso() {
+            document.getElementById('popup').style.display = 'none';
+            exibirQuiz();
+        }
+
+        function exibirQuiz() {
+    document.getElementById('quiz').style.display = 'block';
+}
+
+        function submeterQuiz() {
+            // Lógica para processar o quiz e fornecer feedback
+            
+            alert('Quiz submetido. Verifique suas respostas.');
+        }
+    </script>
+</body>
+</html>
